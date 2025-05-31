@@ -83,18 +83,21 @@ Open-Meteo (Free - no key required)
 
 ⚙️ Setup & Installation
 1. Clone Repository
-bashgit clone https://github.com/yourusername/delhi-bus-route-optimization-pso.git
-cd delhi-bus-route-optimization-pso
-2. Install Dependencies
-bashpip install -r requirements.txt
-3. API Configuration
+   
+        git clone https://github.com/yourusername/delhi-bus-route-optimization-pso.git
+        cd delhi-bus-route-optimization-pso
+3. Install Dependencies
+   
+       pip install -r requirements.txt
+4. API Configuration
 Set up your API keys in the notebook or as environment variables:
-python# TomTom API Configuration
-TOMTOM_API_KEY = "your_tomtom_api_key_here"
 
-# Open-Meteo API (Free - No authentication required)
-OPEN_METEO_BASE_URL = "https://api.open-meteo.com/v1"
-4. Get TomTom API Key
+        TomTom API Configuration
+        TOMTOM_API_KEY = "your_tomtom_api_key_here"
+        Open-Meteo API (Free - No authentication required)
+        OPEN_METEO_BASE_URL = "https://api.open-meteo.com/v1"
+   
+5. Get TomTom API Key
 
 Sign up at https://developer.tomtom.com
 Create a new application
@@ -110,17 +113,21 @@ PSO optimization will run with real-time data integration
 
 🔄 System Architecture & Data Pipeline
 1. Data Acquisition Layer
-Static Data Sources → GTFS Parser → Route/Stop Extraction
-OpenStreetMap → Pyrosm → Road Network Graph
-Real-time APIs → TomTom/Open-Meteo → Live Conditions
+   
+        Static Data Sources → GTFS Parser → Route/Stop Extraction
+        OpenStreetMap → Pyrosm → Road Network Graph
+        Real-time APIs → TomTom/Open-Meteo → Live Conditions
 2. Graph Preprocessing Pipeline
-OSM PBF Data → Network Graph Construction → Segment Mapping
-GTFS Routes → Bus Stop Geocoding → Nearest Node Mapping
-Graph Caching → Optimized Path Queries → Route Segments
+   
+        OSM PBF Data → Network Graph Construction → Segment Mapping
+        GTFS Routes → Bus Stop Geocoding → Nearest Node Mapping
+        Graph Caching → Optimized Path Queries → Route Segments  
 3. PSO Optimization Engine
-Route Segmentation → Alternative Path Generation → Fitness Evaluation
-Swarm Initialization → Particle Updates → Convergence Check
-Optimal Route Selection → Performance Metrics → Results Output
+   
+        Route Segmentation → Alternative Path Generation → Fitness Evaluation
+        Swarm Initialization → Particle Updates → Convergence Check
+        Optimal Route Selection → Performance Metrics → Results Output
+   
 🧮 Algorithm Implementation
 Custom PSO Configuration
 
@@ -130,18 +137,20 @@ Inertia Weight: Dynamic adjustment (0.9 → 0.4)
 Acceleration Coefficients: c1=2.0, c2=2.0
 
 Multi-factor Fitness Function
-pythondef fitness_function(route_segment):
-    distance_score = normalize_distance(segment_length)
-    traffic_score = get_traffic_impact(tomtom_data)
-    weather_score = calculate_weather_penalty(meteo_data)
-    incident_score = assess_road_incidents(tomtom_incidents)
+
+    def fitness_function(route_segment):
     
-    fitness = (distance_score * 0.25 + 
-               traffic_score * 0.35 + 
-               weather_score * 0.20 + 
-               incident_score * 0.20)
-    
-    return fitness
+        distance_score = normalize_distance(segment_length)
+        traffic_score = get_traffic_impact(tomtom_data)
+        weather_score = calculate_weather_penalty(meteo_data)
+        incident_score = assess_road_incidents(tomtom_incidents)
+        
+        fitness = (distance_score * 0.25 + 
+                   traffic_score * 0.35 + 
+                   weather_score * 0.20 + 
+                   incident_score * 0.20)
+        
+        return fitness
 Route Segmentation Strategy
 
 Inter-stop Optimization: Evaluates alternative paths between consecutive bus stops
