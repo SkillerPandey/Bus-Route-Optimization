@@ -105,7 +105,7 @@ Set up your API keys in the notebook or as environment variables:
         Open-Meteo API (Free - No authentication required)
         OPEN_METEO_BASE_URL = "https://api.open-meteo.com/v1"
    
-4 Get TomTom API Key
+4. Get TomTom API Key
 
    a. Sign up at https://developer.tomtom.com
    
