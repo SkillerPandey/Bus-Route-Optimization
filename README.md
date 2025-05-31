@@ -196,24 +196,7 @@ Real-time bus location: Integration with real-time bus location data.
 Bus scheduling. Adding scdeduling algorithm to better optimize the model.
 Mobile API: RESTful service for mobile app integration
 
-📝 Project Structure
-delhi-bus-route-optimization-pso/
-├── route_optimization_pso.ipynb    # Main notebook
-├── requirements.txt                # Dependencies
-├── README.md                      # This file
-├── .gitignore                     # Ignore large files
-├── data/                          # Data directory (git-ignored)
-│   ├── gtfs/                      # GTFS files (auto-downloaded)
-│   ├── osm/                       # OSM data cache
-│   └── weather/                   # Weather data cache
-├── src/                           # Source modules (optional)
-│   ├── pso_optimizer.py          # PSO implementation
-│   ├── data_processor.py         # Data handling
-│   └── fitness_functions.py      # Fitness calculations
-└── assets/                        # Documentation assets
-    ├── demo_screenshot.png
-    ├── architecture_diagram.png
-    └── results_visualization.png
+
 
 🤝 Contributing
 
