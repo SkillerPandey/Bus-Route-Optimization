@@ -72,12 +72,12 @@ APIs - TomTom, Open-Meteo,
 
 📋 Prerequisites
 
-Python 3.7+
-Google Colab or Jupyter Notebook
-API keys for:
+1.Python 3.7+
+2. Google Colab or Jupyter Notebook
+3.API keys for:
 
-TomTom Traffic & Incidents
-Open-Meteo (Free - no key required)
+   a. TomTom Traffic & Incidents
+   b. Open-Meteo (Free - no key required)
 
 
 
