@@ -24,12 +24,14 @@ A modular Python-based system for real-time bus route optimization in Delhi, usi
 
 1. TomTom Traffic & Incident APIs → https://developer.tomtom.com
 
-      Traffic flow and congestion data
-      Live road incidents and closures
-      Update frequency: Real-time
+   Traffic flow and congestion data
+   
+   Live road incidents and closures
+   
+   Update frequency: Real-time
 
 
-2. Open-Meteo Weather API → https://open-meteo.com/
+3. Open-Meteo Weather API → https://open-meteo.com/
 
       Real-time and forecasted weather: precipitation, wind, temperature
       Update frequency: Hourly
