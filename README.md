@@ -258,3 +258,6 @@ OpenStreetMap Integration
    Push to the branch (git push origin feature/enhancement-name)
    
    Create a Pull Request
+
+
+⚠️ Note: Large datasets (OSM PBF files, GTFS data, weather datasets) are downloaded programmatically during execution and are not stored in the repository to maintain clean version control and comply with GitHub file size limits. The system handles all data acquisition automatically upon first run.
