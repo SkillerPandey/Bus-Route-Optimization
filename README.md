@@ -2,73 +2,66 @@
 A modular Python-based system for real-time bus route optimization in Delhi, using a custom Particle Swarm Optimization (PSO) algorithm. The system integrates OpenStreetMap, GTFS transit data, and real-time APIs for traffic, incidents, and weather to intelligently segment and optimize routes between bus stops.
 🚀 Features
 
-Custom PSO-based Segmented Route Optimization: Evaluates multiple alternative paths between consecutive bus stops and selects the optimal sequence
-Multi-factor Fitness Function: Incorporates:
+1. Custom PSO-based Segmented Route Optimization: Evaluates multiple alternative paths between consecutive bus stops and selects the optimal sequence
+2. Multi-factor Fitness Function: Incorporates:
 
-Road segment length
-Real-time traffic speeds and congestion
-Weather impacts (e.g. rain, wind, temperature)
-Traffic incidents and road closures
+      Road segment length
+      Real-time traffic speeds and congestion
+      Weather impacts (e.g. rain, wind, temperature)
+      Traffic incidents and road closures
 
 
-Real-time & Static Data Fusion: Combines live feeds from TomTom and Open-Meteo with static GTFS and OSM datasets for adaptive routing
-Delhi Public Transport Integration: Designed for Delhi's official GTFS bus data, with full support for its route, stop, and timetable structures
-Graph-based Preprocessing Pipeline: Efficient graph construction, segment-level caching, and nearest-node mapping using OSMnx and Pyrosm
-Historical Weather Adaptability: (optional) Support for historical weather integration to optimize seasonal routing strategies
+3. Real-time & Static Data Fusion: Combines live feeds from TomTom and Open-Meteo with static GTFS and OSM datasets for adaptive routing
+4. Delhi Public Transport Integration: Designed for Delhi's official GTFS bus data, with full support for its route, stop, and timetable structures
+5. Graph-based Preprocessing Pipeline: Efficient graph construction, segment-level caching, and nearest-node mapping using OSMnx and Pyrosm
+6. Historical Weather Adaptability: (optional) Support for historical weather integration to optimize seasonal routing strategies
 
 📊 Data Sources
 🔴 Real-time APIs
 
-TomTom Traffic & Incident APIs → https://developer.tomtom.com
+1. TomTom Traffic & Incident APIs → https://developer.tomtom.com
 
-Traffic flow and congestion data
-Live road incidents and closures
-Update frequency: Real-time
+      Traffic flow and congestion data
+      Live road incidents and closures
+      Update frequency: Real-time
 
 
-Open-Meteo Weather API → https://open-meteo.com/
+2. Open-Meteo Weather API → https://open-meteo.com/
 
-Real-time and forecasted weather: precipitation, wind, temperature
-Update frequency: Hourly
+      Real-time and forecasted weather: precipitation, wind, temperature
+      Update frequency: Hourly
 
 
 
 🟡 Static Datasets
 
-Open Transit Delhi – Static Bus Data → https://otd.delhi.gov.in/data/static/
+1. Open Transit Delhi – Static Bus Data → https://otd.delhi.gov.in/data/static/
 
-Route shapes, stops, timetables
-Format: GTFS
-Size: 1Kb - 139MB
+      Route shapes, stops, timetables
+      Format: GTFS
+      Size: 1Kb - 139MB
 
+2. OpenStreetMap PBF Data
 
-Open Transit Delhi – Real-time Bus Positions → https://otd.delhi.gov.in/data/realtime/
-
-Live vehicle tracking
-Used optionally for route validation
-
-
-OpenStreetMap PBF Data
-
-Source for road networks
-Clipped dynamically to Delhi/GTFS bounding box
-Parsed using Pyrosm
+      Source for road networks
+      Clipped dynamically to Delhi/GTFS bounding box
+      Parsed using Pyrosm
 
 
-Open-Meteo Historical Weather Data (optional)
+3. Open-Meteo Historical Weather Data (optional)
 
-10 years of Delhi weather history
-Used to analyze long-term weather influence on routing
-Size: Depending on your requirements
+      10 years of Delhi weather history
+      Used to analyze long-term weather influence on routing
+      Size: Depending on your requirements
 
 🛠️ Technology Stack
-Core - Python 3.7+
-Development - Google Colab / Jupyter Notebook
-Graph Processing - Pyrosm, OSMnx, NetworkX
-Optimization - Custom PSO implementation
-Data Manipulation - Pandas, NumPy
-Visualization - Matplotlib, Seaborn
-APIs - TomTom, Open-Meteo,
+1. Core - Python 3.7+
+2. Development - Google Colab / Jupyter Notebook
+3. Graph Processing - Pyrosm, OSMnx, NetworkX
+4. Optimization - Custom PSO implementation
+5. Data Manipulation - Pandas, NumPy
+6. Visualization - Matplotlib, Seaborn
+7. APIs - TomTom, Open-Meteo,
 
 📋 Prerequisites
 
