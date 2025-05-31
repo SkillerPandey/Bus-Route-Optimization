@@ -5,7 +5,7 @@ A modular Python-based system for real-time bus route optimization in Delhi, usi
 1. Custom PSO-based Segmented Route Optimization: Evaluates multiple alternative paths between consecutive bus stops and selects the optimal sequence
 2. Multi-factor Fitness Function: Incorporates:
 
-      Road segment length
+a      Road segment length
       Real-time traffic speeds and congestion
       Weather impacts (e.g. rain, wind, temperature)
       Traffic incidents and road closures
